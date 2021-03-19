@@ -1,0 +1,27 @@
+[{
+    "id": 1,
+    "name":"Bike",
+    "price": 100,
+    "image": "https://i.ibb.co/tsjt3ZB/Frame.png",
+    "ip_address": "103.104.4.71"
+  }, {
+    "id": 2,
+    "name":"Car",
+    "price": 200,
+    "image": "https://i.ibb.co/FYcwg1r/Frame-2.png",
+    "ip_address": "107.50.190.196"
+  }, {
+    "id": 3,
+    "name":"Bus",
+    "price": 300,
+    "image": "https://i.ibb.co/MRg04vz/Frame-1.png",
+    "ip_address": "141.212.109.176"
+  },{
+    "id": 4,
+    "name":"Train",
+    "price": 300,
+    "image": "https://i.ibb.co/gF0W8HV/Group.png",
+    "ip_address": "141.212.109.176"
+  }]
+
+  

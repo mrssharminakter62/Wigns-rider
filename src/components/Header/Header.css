@@ -1,0 +1,20 @@
+.page-style{
+   
+    background-color: aqua;
+    
+}
+.logo{
+    padding-top: 20px;
+    width: 100px;
+}
+.nav{
+margin-left: 1000px;
+padding-bottom: 30px;
+}
+.link{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin: 5px 10px;
+
+}
