@@ -1,0 +1,17 @@
+.form-style{
+  margin-top: 100px;
+  margin-left: 200px;
+}
+.input-style{
+    padding: 5px 100px;
+    margin: 5px;
+    text-align: start;
+}
+.address{
+    display: flex;
+}
+.contact{
+    text-align: center;
+    border-bottom: 10px solid red;
+    margin-bottom: 40px;
+}
