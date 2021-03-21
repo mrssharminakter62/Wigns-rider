@@ -2,8 +2,9 @@ import React from 'react';
 import './Destination.css';
 import Map from '../../images/Map.png'
 
-const Destination = (props) => {
 
+const Destination = () => {
+  
     return (
         <div className="destination">
                 <div className="style-form">
@@ -13,13 +14,13 @@ const Destination = (props) => {
                         <p>To</p>
                         <input type="text"/>
                         <br/>
-                        <button className="btn btn-primary mt-2">Search</button>
+                        <button className="btn btn-dark mt-2"
+                        >Search</button>
                     </div>
                 </div>
                 <div>
                     <img src={Map} className="image" alt=""/>
                 </div>
-
         </div>
     
     );

@@ -39,9 +39,9 @@ function App() {
           <Contact></Contact>
         </Route>
         <Route exact path="/">
-      
+          <Home></Home>
         </Route>
-        <Route path="/*">
+        <Route path="*">
            <NoMatch></NoMatch>
         </Route>
       </Switch>

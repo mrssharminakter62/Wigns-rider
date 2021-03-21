@@ -27,7 +27,7 @@ const Contact = () => {
       <input name="phone" className="input-style" ref={register({ required: true })} placeholder="Your Phone Number" />
       {errors.name && <span className="error">Phone Number is required</span>}
       <br/>
-     <input type="submit" className="input-style"/>
+     <input type="submit" className="input-style input"/>
       </form>
       <div className="form-style">
           <h1 className="contact">CONTACT US</h1>

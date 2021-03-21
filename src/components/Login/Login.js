@@ -2,7 +2,9 @@ import { useContext, useState } from 'react';
 import { UserContext } from '../../App';
 import { useHistory, useLocation } from "react-router";
 import { handleGoogleSignIn, initializeLoginFamework, handleSignOut, handleFbSignIn, createUserWithinEmailAndPassword, signInWithEmailAndPassword} from './LoginManager';
-import './Login.css'
+import './Login.css';
+import google from '../../images/google.png';
+import facebook from '../../images/facebook.png'
 
 
 function Login() {
@@ -60,6 +62,7 @@ const handleResponse = (res, redirect) =>{
       const newUserInfo = {...user};
       newUserInfo[e.target.name] = e.target.value;
       setUser(newUserInfo);
+      // console.log(newUserInfo)
     }
   }
   const handleSubmit = (e) => {
@@ -73,6 +76,7 @@ const handleResponse = (res, redirect) =>{
  if(!newUser && user.email && user.password){
    signInWithEmailAndPassword(user.email, user.password)
    .then(res =>{
+     console.log(res)
     handleResponse(res, true)
    })
     }
@@ -80,38 +84,45 @@ const handleResponse = (res, redirect) =>{
   }
 
   return (
-    <div style={{textAlign:'center'}}>
-   
-    {
-      user.isSignedIn && <div>
-         <p>welcome,{user.name}</p>
-         <p>Your email{user.email}</p>
-         <img src={user.photo} alt=""/>
-         </div>
-    }
-    <input type="checkbox" onChange={() => setNewUser(!newUser)} name="newUser" id=""/>
-    <label htmlFor="newUser">New User Sign Up</label>
-    <form onSubmit={handleSubmit}>
-    {newUser && <input name="name" type="text" className="input-style" onBlur={handleBlur} placeholder="Your name"/>}
-     <br/>
-    <input type="text" onBlur={handleBlur} name="email" className="input-style"  placeholder="Your Email address" required/>
-    <br/>
-    <input type="password" onBlur={handleBlur} className="input-style" name="password" placeholder="Your Password" required/>
-    <br/>
-   <input type="submit" className="input-style" value={newUser ? 'Sign Up' : 'Sign In'}/>
-    </form>
-    <p style={{color:'red'}}>{user.error}</p>
-    {
-      user.success && <p style={{color:'green'}}>User {newUser ? 'created' : 'Logged In ' }successfully</p>
-    }
-    <h3>Or</h3>
-     {
-     user.isSignedIn ? <button onClick={signOut} >Sign out</button>:
-    <button onClick={googleSignIn} className="google" > Sign  in  using Google </button>
-    }
-   <br/>
-   <button onClick={fbSignIn} className="facebook" >Sign in using Facebook</button>
-    </div>
+    <div>
+      <div className="signin-form" >
+      <div className="sign">
+            {
+              user.isSignedIn && <div>
+                <p>welcome,{user.name}</p>
+                <p>Your email{user.email}</p>
+                <img src={user.photo} alt=""/>
+                </div>
+            }
+            <form onSubmit={handleSubmit}>
+            {newUser && <input name="name" type="text" className="input-style" onBlur={handleBlur} placeholder="Your name"/>}
+            <br/>
+            <input type="text" onBlur={handleBlur} name="email" className="input-style"  placeholder="Your Email address" required/>
+            <br/>
+            <input type="password" onBlur={handleBlur} className="input-style" name="password" placeholder="Your Password" required/>
+            <br/>
+          <input type="submit" className="input-style user" value={newUser ? 'Create an account' : 'Sign In'}/>
+            </form>
+            <p style={{color:'red'}}>{user.error}</p>
+            {
+              user.success && <p style={{color:'green'}}>User {newUser ? 'created' : 'Logged In ' }successfully</p>
+            }
+            <p>Already have an account ?</p> 
+            <input type="checkbox" onChange={() => setNewUser(!newUser)} name="newUser" id=""/>
+            <label htmlFor="newUser">New User Sign Up</label>
+              <h4 className="or">or</h4>
+              </div>
+      </div>
+        <div>
+          
+          {
+          user.isSignedIn ? <button onClick={signOut} >Sign out</button>:
+          <button onClick={googleSignIn} className="google" ><img  src={google} alt="" style={{maxWidth:'40px'}}/> Sign  in  using Google </button>
+          }
+          <br/>
+          <button onClick={fbSignIn} className="facebook" ><img src={facebook}  alt="" style={{maxWidth:'40px'}}/> Sign in using Facebook</button>
+          </div>
+  </div>
   
   );
 }

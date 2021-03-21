@@ -13,14 +13,15 @@ const handleCheckOut = ()=>{
 }
 
     return (
-        <Link to= "/login" onClick={handleCheckOut}>
-        <Card className="card-style" style={{ width: '18rem' }}>
-        <Card.Img variant="top" src= {image} />
-        <Card.Body className="fw-bold text-center text-dark" >
-          <Card.Title>{name}</Card.Title>
-        </Card.Body>
-      </Card> 
-    </Link>
+      
+          <Link to= "/login" onClick={handleCheckOut}>
+              <Card className="card-style" style={{ width: '18rem' }}>
+                  <Card.Img variant="top" src= {image} />
+                  <Card.Body className="fw-bold text-center text-dark" >
+                    <Card.Title>{name}</Card.Title>
+                  </Card.Body>
+              </Card> 
+          </Link>
     );
 };
 

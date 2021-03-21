@@ -1,10 +1,38 @@
+.signin-form{
+   
+    border: 1px solid gray;
+    width: 500px;
+    height: 320px;
+    text-align: left;
+    float: left;
+    margin: 50px 400px 0px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px gray;
+}
+.sign{
+    margin-left: 10px;
+}
+.user{
+    background-color:rgb(12, 162, 204);
+    border-radius: 5px;
+}
+
 .google{
-    background-color: #f32011 ;
-    color: white;
+    margin-left: 450px;
     margin-bottom: 5px;
-    padding: 2px 15px;
+    margin-top: 20px;
+    padding: 2px 5px;
+    padding-right: 200px;
+    text-align: center;
+    border-radius: 10px;
 }
 .facebook{
-    background-color:#4667A4 ;
-    color: white;
+  margin-left: 450px;
+  padding-right: 185px;
+  border-radius: 10px;
+}
+.or{
+    text-align: center;
+    color:red;
 }

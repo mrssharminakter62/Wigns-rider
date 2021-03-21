@@ -7,6 +7,10 @@
     margin: 5px;
     text-align: start;
 }
+.input{
+    background-color: rgb(12, 162, 204);
+    border-radius: 10px;
+}
 .address{
     display: flex;
 }
